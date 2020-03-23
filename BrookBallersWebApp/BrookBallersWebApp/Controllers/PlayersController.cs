@@ -19,9 +19,9 @@ namespace BrookBallersWebApp.Controllers
         }
 
         // GET: Players
-        public async Task<IActionResult> Index()
+        public async Task<IActionResult> Index(string input)
         {
-            var footballDbContext = _context.Players.Include(p => p.Team);
+            var footballDbContext = _context.Players.Include(p => p.Team).Where(p => p.PlayerName.Contains(input) || input == null); 
             return View(await footballDbContext.ToListAsync());
         }
 
@@ -36,8 +36,6 @@ namespace BrookBallersWebApp.Controllers
             var footballDbContext = _context.Players.Include(p => p.Team).OrderByDescending(p => p.Goals);
             return View(await footballDbContext.ToListAsync());
         }
-
-
 
         // GET: Players/Details/5
         public async Task<IActionResult> Details(int? id)

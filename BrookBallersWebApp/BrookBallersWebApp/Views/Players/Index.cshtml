@@ -4,80 +4,120 @@
     ViewData["Title"] = "Index";
 }
 
-    <style>
-        .body {
-            background: url('https://www.dreamleagues.co.uk/content/images/backdrops/banner-min.jpg') no-repeat center center fixed;
-            background-size: cover;
-            background-attachment: fixed;
-            color: white;
-        }
+<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
 
-        .table-text{
-            color:white
-        }
+<style>
+    .body {
+        background: url('https://www.dreamleagues.co.uk/content/images/backdrops/banner-min.jpg') no-repeat center center fixed;
+        background-size: cover;
+        background-attachment: fixed;
+        color: white;
+    }
 
-        .add-player{
-            text-align:right
-        }
+    .table-text {
+        color: white
+    }
 
-        h2{
-            text-align:center;
-        }
+    h2 {
+        text-align: center;
+    }
 
-     
-    </style>
+    .tile {
+        list-style-type: none;
+        margin-top: 1vh;
+    }
+
+   .tile li {
+     display: inline-block;
+   }
+
+    .add-player {
+        margin-left: 55.6vw;
+    }
+
+    .search-name {
+        
+        margin-left:-3vw;
+        
+    }
+</style>
 
 
-    <body class="body">
 
-        <h2>All Players</h2>
+<body class="body">
 
-        <p class="add-player">
-            <a asp-action="Create">Add Player</a>
-        </p>
+    <h2>All Players</h2>
 
-        <table class="table">
-            <thead>
-                <tr class="table-text">
-                    <th>
-                        @Html.DisplayNameFor(model => model.PlayerName)
-                    </th>
-                    <th>
-                        @Html.DisplayNameFor(model => model.Age)
-                    </th>
-                    <th>
-                        @Html.DisplayNameFor(model => model.Pos)
-                    </th>
-                    <th>
-                        @Html.DisplayNameFor(model => model.Foot)
-                    </th>
-                    <th>
-                        @Html.DisplayNameFor(model => model.Goals)
-                    </th>
-                    <th>
-                        @Html.DisplayNameFor(model => model.Assists)
-                    </th>
-                    <th>
-                        @Html.DisplayNameFor(model => model.Apps)
-                    </th>
-                    <th>
-                        @Html.DisplayNameFor(model => model.Yel)
-                    </th>
-                    <th>
-                        @Html.DisplayNameFor(model => model.Red)
-                    </th>
+    <ul class="tile">
+        <li class="search-name">
+            @using (Html.BeginForm("Index", "Players", FormMethod.Get))
+             {
+                @Html.TextBox("input")<input type="submit" value="Search"/>
+             }
+        </li>
+        <li>
+            <p class="add-player">
+                <a asp-action="Create">Add Player</a>
+            </p>
+        </li>
+    </ul>
 
-                    <th>
-                        @Html.DisplayNameFor(model => model.TContributions)
-                    </th>
-                    <th>
-                        @Html.DisplayNameFor(model => model.Team.TeamName)
-                    </th>
+    <table class="table">
+        <thead>
+            <tr class="table-text">
+                <th>
+                    @Html.DisplayNameFor(model => model.PlayerName)
+                </th>
+                <th>
+                    @Html.DisplayNameFor(model => model.Age)
+                </th>
+                <th>
+                    @Html.DisplayNameFor(model => model.Pos)
+                </th>
+                <th>
+                    @Html.DisplayNameFor(model => model.Foot)
+                </th>
+                <th>
+                    @Html.DisplayNameFor(model => model.Goals)
+                </th>
+                <th>
+                    @Html.DisplayNameFor(model => model.Assists)
+                </th>
+                <th>
+                    @Html.DisplayNameFor(model => model.Apps)
+                </th>
+                <th>
+                    @Html.DisplayNameFor(model => model.Yel)
+                </th>
+                <th>
+                    @Html.DisplayNameFor(model => model.Red)
+                </th>
+
+                <th>
+                    @Html.DisplayNameFor(model => model.TContributions)
+                </th>
+                <th>
+                    @Html.DisplayNameFor(model => model.Team.TeamName)
+                </th>
+            </tr>
+        </thead>
+        <tbody>
+
+
+            @if (Model.Count() == 0)
+             {
+                <tr>
+                    <td colspan="3" style="color:black">
+                        No Players Found
+                    </td>
                 </tr>
-            </thead>
-            <tbody>
-                @foreach (var item in Model)
-                {
+             }
+
+            else
+            {
+
+               @foreach (var item in Model) 
+                { 
                     <tr class="table-text">
                         <td>
                             @Html.DisplayFor(modelItem => item.PlayerName)
@@ -97,7 +137,6 @@
                         <td>
                             @Html.DisplayFor(modelItem => item.Assists)
                         </td>
-
                         <td>
                             @Html.DisplayFor(modelItem => item.Apps)
                         </td>
@@ -115,10 +154,9 @@
                         </td>
                     </tr>
                 }
-            </tbody>
-        </table>
+        }
+        </tbody>
+    </table>
 
-
-
-    </body>
+</body>
 
