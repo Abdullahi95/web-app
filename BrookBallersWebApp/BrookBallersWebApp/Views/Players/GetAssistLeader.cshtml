@@ -1,0 +1,53 @@
+﻿@model IEnumerable<BrookBallersWebApp.Models.Player>
+
+@{
+    ViewData["Title"] = "GetAssistLeader";
+}
+
+<h1>GetAssistLeader</h1>
+
+<table class="table">
+    <thead>
+        <tr>
+            <th>
+                @Html.DisplayNameFor(model => model.PlayerName)
+            </th>
+            <th>
+                @Html.DisplayNameFor(model => model.Pos)
+            </th>
+            <th>
+                @Html.DisplayNameFor(model => model.Team.TeamName)
+            </th>
+            <th>
+                @Html.DisplayNameFor(model => model.Assists)
+            </th>
+            <th>
+                @Html.DisplayNameFor(model => model.Apps)
+            </th>
+            <th></th>
+        </tr>
+    </thead>
+
+    <tbody>
+        @foreach (var item in Model)
+        {
+            <tr>
+                <td>
+                    @Html.DisplayFor(modelItem => item.PlayerName)
+                </td>
+                <td>
+                    @Html.DisplayFor(modelItem => item.Pos)
+                </td>
+                <td>
+                    @Html.DisplayFor(modelItem => item.Team.TeamName)
+                </td>
+                <td>
+                    @Html.DisplayFor(modelItem => item.Assists)
+                </td>
+                <td>
+                    @Html.DisplayFor(modelItem => item.Apps)
+                </td>
+            </tr>
+        }
+    </tbody>
+</table>

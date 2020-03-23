@@ -1,0 +1,104 @@
+﻿@model IEnumerable<BrookBallersWebApp.Models.Player>
+
+@{
+    ViewData["Title"] = "Index";
+}
+
+<h1>Index</h1>
+
+<p>
+    <a asp-action="Create">Create New</a>
+</p>
+<table class="table">
+    <thead>
+        <tr>
+            <th>
+                @Html.DisplayNameFor(model => model.PlayerName)
+            </th>
+            <th>
+                @Html.DisplayNameFor(model => model.Age)
+            </th>
+            <th>
+                @Html.DisplayNameFor(model => model.Pos)
+            </th>
+            <th>
+                @Html.DisplayNameFor(model => model.Foot)
+            </th>
+            @*<th>
+            @Html.DisplayNameFor(model => model.ShirtNum)
+        </th>*@
+            <th>
+                @Html.DisplayNameFor(model => model.Goals)
+            </th>
+            <th>
+                @Html.DisplayNameFor(model => model.Assists)
+            </th>
+
+            <th>
+                @Html.DisplayNameFor(model => model.Apps)
+            </th>
+            <th>
+                @Html.DisplayNameFor(model => model.Yel)
+            </th>
+            <th>
+                @Html.DisplayNameFor(model => model.Red)
+            </th>
+
+            <th>
+                @Html.DisplayNameFor(model => model.TContributions)
+            </th>
+            <th>
+                @Html.DisplayNameFor(model => model.Team.TeamName)
+            </th>
+            <th></th>
+        </tr>
+    </thead>
+    <tbody>
+@foreach (var item in Model) {
+        <tr>
+            <td>
+                @Html.DisplayFor(modelItem => item.PlayerName)
+            </td>
+            <td>
+                @Html.DisplayFor(modelItem => item.Age)
+            </td>
+            <td>
+                @Html.DisplayFor(modelItem => item.Pos)
+            </td>
+            <td>
+                @Html.DisplayFor(modelItem => item.Foot)
+            </td>
+            @*<td>
+            @Html.DisplayFor(modelItem => item.ShirtNum)
+        </td>*@
+            <td>
+                @Html.DisplayFor(modelItem => item.Goals)
+            </td>
+            <td>
+                @Html.DisplayFor(modelItem => item.Assists)
+            </td>
+
+            <td>
+                @Html.DisplayFor(modelItem => item.Apps)
+            </td>
+            <td>
+                @Html.DisplayFor(modelItem => item.Yel)
+            </td>
+            <td>
+                @Html.DisplayFor(modelItem => item.Red)
+            </td>
+            <td>
+                @Html.DisplayFor(modelItem => item.TContributions)
+            </td>
+            <td>
+                @Html.DisplayFor(modelItem => item.Team.TeamName)
+            </td>
+            <td>
+                <a asp-action="Edit" asp-route-id="@item.PlayerID">Edit</a> |
+                @*<a asp-action="Details" asp-route-id="@item.PlayerID">Details</a> |*@
+                <a asp-action="Delete" asp-route-id="@item.PlayerID">Delete</a>
+            </td>
+        </tr>
+}
+    </tbody>
+</table>

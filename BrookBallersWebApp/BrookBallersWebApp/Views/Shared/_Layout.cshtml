@@ -8,10 +8,23 @@
     <link rel="stylesheet" href="~/css/site.css" />
 </head>
 <body>
+
+    <style>
+        .bg-danger{
+            background: black !important
+        }
+        .navbar-dark{
+            : white !important
+        }
+
+      
+
+    </style>
+
     <header>
-        <nav class="navbar navbar-expand-sm navbar-toggleable-sm navbar-light bg-white border-bottom box-shadow mb-3">
+        <nav class="navbar navbar-expand-sm navbar-toggleable-sm navbar-dark bg-danger border-bottom box-shadow mb-3">
             <div class="container">
-                <a class="navbar-brand" asp-area="" asp-controller="Home" asp-action="Index">BrookBallersWebApp</a>
+                <a class="navbar-brand" asp-area="" asp-controller="Home" asp-action="Index">Brook Ballers</a>
                 <button class="navbar-toggler" type="button" data-toggle="collapse" data-target=".navbar-collapse" aria-controls="navbarSupportedContent"
                         aria-expanded="false" aria-label="Toggle navigation">
                     <span class="navbar-toggler-icon"></span>
@@ -19,22 +32,16 @@
                 <div class="navbar-collapse collapse d-sm-inline-flex flex-sm-row-reverse">
                     <ul class="navbar-nav flex-grow-1">
                         <li class="nav-item">
-                            <a class="nav-link text-dark" asp-area="" asp-controller="Home" asp-action="Index">Home</a>
+                            <a class="nav-link text-dark" asp-area="" asp-controller="Teams" asp-action="Index">League Table</a>
                         </li>
                         <li class="nav-item">
-                            <a class="nav-link text-dark" asp-area="" asp-controller="Leagues" asp-action="Index">League Table</a>
+                            <a class="nav-link text-dark" asp-area="" asp-controller="Players" asp-action="GetTopScorers">Top Scorers</a>
                         </li>
                         <li class="nav-item">
-                            <a class="nav-link text-dark" asp-area="" asp-controller="Players" asp-action="TopScorer">Top Scorer</a>
-                        </li>
-                        <li class="nav-item">
-                            <a class="nav-link text-dark" asp-area="" asp-controller="Players" asp-action="MostAssists">Most Assists</a>
+                            <a class="nav-link text-dark" asp-area="" asp-controller="Players" asp-action="GetAssistLeader">Assists Leaders</a>
                         </li>
                         <li class="nav-item">
                             <a class="nav-link text-dark" asp-area="" asp-controller="Players" asp-action="Index">All Players</a>
-                        </li>
-                        <li class="nav-item">
-                            <a class="nav-link text-dark" asp-area="" asp-controller="Home" asp-action="Privacy">Contact Us</a>
                         </li>
                     </ul>
                 </div>

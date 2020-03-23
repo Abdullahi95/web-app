@@ -1,0 +1,93 @@
+﻿@model BrookBallersWebApp.Models.Player
+
+@{
+    ViewData["Title"] = "Delete";
+}
+
+<h1>Delete</h1>
+
+<h3>Are you sure you want to delete this?</h3>
+<div>
+    <h4>Player</h4>
+    <hr />
+    <dl class="row">
+        <dt class = "col-sm-2">
+            @Html.DisplayNameFor(model => model.PlayerName)
+        </dt>
+        <dd class = "col-sm-10">
+            @Html.DisplayFor(model => model.PlayerName)
+        </dd>
+        <dt class = "col-sm-2">
+            @Html.DisplayNameFor(model => model.Age)
+        </dt>
+        <dd class = "col-sm-10">
+            @Html.DisplayFor(model => model.Age)
+        </dd>
+        <dt class = "col-sm-2">
+            @Html.DisplayNameFor(model => model.Pos)
+        </dt>
+        <dd class = "col-sm-10">
+            @Html.DisplayFor(model => model.Pos)
+        </dd>
+        <dt class = "col-sm-2">
+            @Html.DisplayNameFor(model => model.Foot)
+        </dt>
+        <dd class = "col-sm-10">
+            @Html.DisplayFor(model => model.Foot)
+        </dd>
+        <dt class = "col-sm-2">
+            @Html.DisplayNameFor(model => model.ShirtNum)
+        </dt>
+        <dd class = "col-sm-10">
+            @Html.DisplayFor(model => model.ShirtNum)
+        </dd>
+        <dt class = "col-sm-2">
+            @Html.DisplayNameFor(model => model.Goals)
+        </dt>
+        <dd class = "col-sm-10">
+            @Html.DisplayFor(model => model.Goals)
+        </dd>
+        <dt class = "col-sm-2">
+            @Html.DisplayNameFor(model => model.Assists)
+        </dt>
+        <dd class = "col-sm-10">
+            @Html.DisplayFor(model => model.Assists)
+        </dd>
+        <dt class = "col-sm-2">
+            @Html.DisplayNameFor(model => model.TContributions)
+        </dt>
+        <dd class = "col-sm-10">
+            @Html.DisplayFor(model => model.TContributions)
+        </dd>
+        <dt class = "col-sm-2">
+            @Html.DisplayNameFor(model => model.Apps)
+        </dt>
+        <dd class = "col-sm-10">
+            @Html.DisplayFor(model => model.Apps)
+        </dd>
+        <dt class = "col-sm-2">
+            @Html.DisplayNameFor(model => model.Yel)
+        </dt>
+        <dd class = "col-sm-10">
+            @Html.DisplayFor(model => model.Yel)
+        </dd>
+        <dt class = "col-sm-2">
+            @Html.DisplayNameFor(model => model.Red)
+        </dt>
+        <dd class = "col-sm-10">
+            @Html.DisplayFor(model => model.Red)
+        </dd>
+        <dt class = "col-sm-2">
+            @Html.DisplayNameFor(model => model.Team)
+        </dt>
+        <dd class = "col-sm-10">
+            @Html.DisplayFor(model => model.Team.TeamID)
+        </dd class>
+    </dl>
+    
+    <form asp-action="Delete">
+        <input type="hidden" asp-for="PlayerID" />
+        <input type="submit" value="Delete" class="btn btn-danger" /> |
+        <a asp-action="Index">Back to List</a>
+    </form>
+</div>
