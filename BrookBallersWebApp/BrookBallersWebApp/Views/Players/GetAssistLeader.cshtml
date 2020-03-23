@@ -4,50 +4,81 @@
     ViewData["Title"] = "GetAssistLeader";
 }
 
-<h1>GetAssistLeader</h1>
+<style>
+    .body {
+        background: url('https://www.dreamleagues.co.uk/content/images/backdrops/banner-min.jpg') no-repeat center center fixed;
+        background-size: cover;
+        background-attachment: fixed;
+        color:white;
+    }
 
-<table class="table">
-    <thead>
-        <tr>
-            <th>
-                @Html.DisplayNameFor(model => model.PlayerName)
-            </th>
-            <th>
-                @Html.DisplayNameFor(model => model.Pos)
-            </th>
-            <th>
-                @Html.DisplayNameFor(model => model.Team.TeamName)
-            </th>
-            <th>
-                @Html.DisplayNameFor(model => model.Assists)
-            </th>
-            <th>
-                @Html.DisplayNameFor(model => model.Apps)
-            </th>
-            <th></th>
-        </tr>
-    </thead>
+    .table-text{
+        color:white;
+    }
 
-    <tbody>
-        @foreach (var item in Model)
-        {
-            <tr>
-                <td>
-                    @Html.DisplayFor(modelItem => item.PlayerName)
-                </td>
-                <td>
-                    @Html.DisplayFor(modelItem => item.Pos)
-                </td>
-                <td>
-                    @Html.DisplayFor(modelItem => item.Team.TeamName)
-                </td>
-                <td>
-                    @Html.DisplayFor(modelItem => item.Assists)
-                </td>
-                <td>
-                    @Html.DisplayFor(modelItem => item.Apps)
-                </td>
+    h2 {
+        margin-bottom: 30px;
+        text-align: center;
+    }
+
+
+
+</style>
+
+
+
+
+<body class="body">
+
+    <h2>Assist Leaders</h2>
+
+    <table class="table">
+        <thead>
+            <tr class="table-text">
+                <th>
+                    @Html.DisplayNameFor(model => model.PlayerName)
+                </th>
+                <th>
+                    @Html.DisplayNameFor(model => model.Pos)
+                </th>
+                <th>
+                    @Html.DisplayNameFor(model => model.Team.TeamName)
+                </th>
+                <th>
+                    @Html.DisplayNameFor(model => model.Assists)
+                </th>
+                <th>
+                    @Html.DisplayNameFor(model => model.Apps)
+                </th>
             </tr>
-        }
-    </tbody>
-</table>
+        </thead>
+
+        <tbody>
+            @foreach (var item in Model)
+            {
+                <tr class="table-text">
+                    <td>
+                        @Html.DisplayFor(modelItem => item.PlayerName)
+                    </td>
+                    <td>
+                        @Html.DisplayFor(modelItem => item.Pos)
+                    </td>
+                    <td>
+                        @Html.DisplayFor(modelItem => item.Team.TeamName)
+                    </td>
+                    <td>
+                        @Html.DisplayFor(modelItem => item.Assists)
+                    </td>
+                    <td>
+                        @Html.DisplayFor(modelItem => item.Apps)
+                    </td>
+                </tr>
+            }
+        </tbody>
+    </table>
+
+
+
+
+
+</body>

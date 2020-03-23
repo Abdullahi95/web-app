@@ -4,80 +4,114 @@
     ViewData["Title"] = "Index";
 }
 
-<h1>Index</h1>
 
-<p>
-    <a asp-action="Create">Create New</a>
-</p>
-<table class="table">
-    <thead>
-        <tr>
-            <th>
-                @Html.DisplayNameFor(model => model.TeamName)
-            </th>
-            <th>
-                @Html.DisplayNameFor(model => model.MP)
-            </th>
-            <th>
-                @Html.DisplayNameFor(model => model.W)
-            </th>
-            <th>
-                @Html.DisplayNameFor(model => model.D)
-            </th>
-            <th>
-                @Html.DisplayNameFor(model => model.L)
-            </th>
-            <th>
-                @Html.DisplayNameFor(model => model.GF)
-            </th>
-            <th>
-                @Html.DisplayNameFor(model => model.GA)
-            </th>
-            <th>
-                @Html.DisplayNameFor(model => model.GD)
-            </th>
-            <th>
-                @Html.DisplayNameFor(model => model.PTS)
-            </th>
-            <th></th>
-        </tr>
-    </thead>
-    <tbody>
-@foreach (var item in Model) {
-        <tr>
-            <td>
-                @Html.DisplayFor(modelItem => item.TeamName)
-            </td>
-            <td>
-                @Html.DisplayFor(modelItem => item.MP)
-            </td>
-            <td>
-                @Html.DisplayFor(modelItem => item.W)
-            </td>
-            <td>
-                @Html.DisplayFor(modelItem => item.D)
-            </td>
-            <td>
-                @Html.DisplayFor(modelItem => item.L)
-            </td>
-            <td>
-                @Html.DisplayFor(modelItem => item.GF)
-            </td>
-            <td>
-                @Html.DisplayFor(modelItem => item.GA)
-            </td>
-            <td>
-                @Html.DisplayFor(modelItem => item.GD)
-            </td>
-            <td>
-                @Html.DisplayFor(modelItem => item.PTS)
-            </td>
-            <td>
-                <a asp-action="Edit" asp-route-id="@item.TeamID">Edit</a> |
-                <a asp-action="Details" asp-route-id="@item.TeamID">Details</a> |
-                <a asp-action="Delete" asp-route-id="@item.TeamID">Delete</a>
-            </td>
-        </tr>
-}
-    </tbody>
-</table>
+<style>
+    .body {
+        background: url('https://www.dreamleagues.co.uk/content/images/backdrops/banner-min.jpg') no-repeat center center fixed;
+        background-size: cover;
+        background-attachment: fixed;
+        color: white;
+    }
+
+    .table-text {
+        color: white;
+    }
+
+    .add-team {
+        text-align: right;
+    }
+
+    h2{
+        margin-bottom: 0px;
+        text-align:center;
+    }
+
+
+</style>
+
+
+<body class="body">
+
+    <h2>League Table</h2>
+
+    <p class="add-team">
+        <a asp-action="Create">Add Team</a>
+    </p>
+    <table class="table">
+        <thead>
+            <tr class="table-text">
+                <th>
+                    @Html.DisplayNameFor(model => model.TeamName)
+                </th>
+                <th>
+                    @Html.DisplayNameFor(model => model.MP)
+                </th>
+                <th>
+                    @Html.DisplayNameFor(model => model.W)
+                </th>
+                <th>
+                    @Html.DisplayNameFor(model => model.D)
+                </th>
+                <th>
+                    @Html.DisplayNameFor(model => model.L)
+                </th>
+                <th>
+                    @Html.DisplayNameFor(model => model.GF)
+                </th>
+                <th>
+                    @Html.DisplayNameFor(model => model.GA)
+                </th>
+                <th>
+                    @Html.DisplayNameFor(model => model.GD)
+                </th>
+                <th>
+                    @Html.DisplayNameFor(model => model.PTS)
+                @*<th></th>*@
+            </tr>
+        </thead>
+        <tbody>
+            @foreach (var item in Model)
+            {
+                <tr class="table-text">
+                    <td>
+                        @Html.DisplayFor(modelItem => item.TeamName)
+                    </td>
+                    <td>
+                        @Html.DisplayFor(modelItem => item.MP)
+                    </td>
+                    <td>
+                        @Html.DisplayFor(modelItem => item.W)
+                    </td>
+                    <td>
+                        @Html.DisplayFor(modelItem => item.D)
+                    </td>
+                    <td>
+                        @Html.DisplayFor(modelItem => item.L)
+                    </td>
+                    <td>
+                        @Html.DisplayFor(modelItem => item.GF)
+                    </td>
+                    <td>
+                        @Html.DisplayFor(modelItem => item.GA)
+                    </td>
+                    <td>
+                        @Html.DisplayFor(modelItem => item.GD)
+                    </td>
+                    <td>
+                        @Html.DisplayFor(modelItem => item.PTS)
+                    </td>
+                    @*<td>
+                        <a asp-action="Edit" asp-route-id="@item.TeamID">Edit</a> |
+                        <a asp-action="Details" asp-route-id="@item.TeamID">Details</a> |
+                        <a asp-action="Delete" asp-route-id="@item.TeamID">Delete</a>
+                    </td>*@
+                </tr>
+            }
+        </tbody>
+    </table>
+
+
+
+
+
+</body>
