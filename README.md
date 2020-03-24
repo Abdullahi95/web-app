@@ -13,8 +13,13 @@ Visual Studio 2017+
 ### Installing
 
 ```
-1. Pull FootballWeb App repo
-2. 
+1. Clone FootballWebApp repo
+2.  Open Visual Studios , click on Tools > Nuget Packet Manager > Package Manager Console.
+3. In Package Manager Console run these two scripts:
+	  a) add-migration v1 
+	  b) update-database
+4.  Now Build Solution and Run
+
 ```
 
 ## Running the tests
@@ -31,27 +36,17 @@ Give an example
 
 ## Deployment
 
-Add additional notes about how to deploy this on a live system
+Web application will be deployed onto netlify.
 
 ## Built With
 
-* [Dropwizard](http://www.dropwizard.io/1.0.2/docs/) - The web framework used
-* [Maven](https://maven.apache.org/) - Dependency Management
-* [ROME](https://rometools.github.io/rome/) - Used to generate RSS Feeds
+* [Visual Studio 2019]
 
-## Contributing
-
-Please read [CONTRIBUTING.md](https://gist.github.com/PurpleBooth/b24679402957c63ec426) for details on our code of conduct, and the process for submitting pull requests to us.
-
-## Versioning
-
-We use [SemVer](http://semver.org/) for versioning. For the versions available, see the [tags on this repository](https://github.com/your/project/tags). 
 
 ## Authors
 
-* **Billie Thompson** - *Initial work* - [PurpleBooth](https://github.com/PurpleBooth)
+* **Hassan Abdullahi** [PurpleBooth](https://github.com/PurpleBooth)
 
-See also the list of [contributors](https://github.com/your/project/contributors) who participated in this project.
 
 ## License
 
