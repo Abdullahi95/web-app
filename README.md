@@ -1,6 +1,6 @@
 # Football League Web Application
 
-A football league web application with  pages such as players, league, top scorers and assist leaders. Comprised of data held in SQL database which was built with EF code first approach, with Razor and CSS used to build the user interface to interact with the data.
+A football league web application with  pages players, league, top scorers and assist leaders. Comprised of data held in SQL database which was built with EF code first approach, with Razor and CSS used to build the user interface to interact with the data.
 
 ## Database Relationship
 
