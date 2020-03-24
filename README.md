@@ -4,7 +4,7 @@ A football league web application with  pages such as players, league, top score
 
 ## Database Relationship
 
-![Image description](https://imgur.com/a/78kUnNW)
+
 
 
 ## Getting Started
