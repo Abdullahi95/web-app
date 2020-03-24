@@ -14,14 +14,15 @@
 
     .table-text{
         color:white;
+        text-align:center;
     }
 
     h2 {
         margin-bottom: 30px;
         text-align: center;
+        text-shadow: #000 0px 0px 1px, #000 0px 0px 1px, #000 0px 0px 1px;
+        color: white;
     }
-
-
 
 </style>
 
@@ -57,7 +58,7 @@
             @foreach (var item in Model)
             {
                 <tr class="table-text">
-                    <td>
+                    <td class="name-text">
                         @Html.DisplayFor(modelItem => item.PlayerName)
                     </td>
                     <td>
@@ -76,9 +77,5 @@
             }
         </tbody>
     </table>
-
-
-
-
 
 </body>

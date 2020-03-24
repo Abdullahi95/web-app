@@ -21,13 +21,13 @@ namespace BrookBallersWebApp.Controllers
         // GET: Players
         public async Task<IActionResult> Index(string input)
         {
-            var footballDbContext = _context.Players.Include(p => p.Team).OrderByDescending(p => p.TGA).Where(p => p.PlayerName.Contains(input) || input == null); 
+            var footballDbContext = _context.Players.Include(p => p.Team).OrderByDescending(p => p.TGA).Where(p => p.PlayerName.Contains(input) || input == null);
             return View(await footballDbContext.ToListAsync());
         }
 
         public async Task<IActionResult> GetAssistLeader()
         {
-            var footballDbContext = _context.Players.Include(p => p.Team).OrderByDescending(p=>p.Assists);
+            var footballDbContext = _context.Players.Include(p => p.Team).OrderByDescending(p => p.Assists);
             return View(await footballDbContext.ToListAsync());
         }
 
@@ -68,7 +68,7 @@ namespace BrookBallersWebApp.Controllers
         // more details see http://go.microsoft.com/fwlink/?LinkId=317598.
         [HttpPost]
         [ValidateAntiForgeryToken]
-        public async Task<IActionResult> Create([Bind("PlayerID,PlayerName,Age,Pos,Foot,ShirtNum,Goals,Assists,TContributions,Apps,Yel,Red,TeamID")] Player player)
+        public async Task<IActionResult> Create([Bind("PlayerID,PlayerName,Age,Pos,Foot,Goals,Assists,TGA,Apps,Yel,Red,TeamID")] Player player)
         {
             if (ModelState.IsValid)
             {
@@ -102,7 +102,7 @@ namespace BrookBallersWebApp.Controllers
         // more details see http://go.microsoft.com/fwlink/?LinkId=317598.
         [HttpPost]
         [ValidateAntiForgeryToken]
-        public async Task<IActionResult> Edit(int id, [Bind("PlayerID,PlayerName,Age,Pos,Foot,ShirtNum,Goals,Assists,TContributions,Apps,Yel,Red,TeamID")] Player player)
+        public async Task<IActionResult> Edit(int id, [Bind("PlayerID,PlayerName,Age,Pos,Foot,Goals,Assists,TGA,Apps,Yel,Red,TeamID")] Player player)
         {
             if (id != player.PlayerID)
             {

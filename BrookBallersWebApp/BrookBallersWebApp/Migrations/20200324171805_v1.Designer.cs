@@ -10,7 +10,7 @@ using Microsoft.EntityFrameworkCore.Storage.ValueConversion;
 namespace BrookBallersWebApp.Migrations
 {
     [DbContext(typeof(FootballDbContext))]
-    [Migration("20200324012033_v1")]
+    [Migration("20200324171805_v1")]
     partial class v1
     {
         protected override void BuildTargetModel(ModelBuilder modelBuilder)

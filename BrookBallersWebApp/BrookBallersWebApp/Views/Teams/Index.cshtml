@@ -15,19 +15,23 @@
 
     .table-text {
         color: white;
+        text-align: center;
     }
 
     .add-team {
         text-align: right;
     }
 
-    h2{
+    h2 {
         margin-bottom: 0px;
-        text-align:center;
+        text-align: center;
+        text-shadow: #000 0px 0px 1px, #000 0px 0px 1px, #000 0px 0px 1px;
+        color: white;
     }
-
-
 </style>
+
+
+
 
 <body class="body">
 
@@ -36,6 +40,8 @@
     <p class="add-team">
         <a asp-action="Create">Add Team</a>
     </p>
+
+
     <table class="table">
         <thead>
             <tr class="table-text">
@@ -65,6 +71,8 @@
                 </th>
                 <th>
                     @Html.DisplayNameFor(model => model.PTS)
+                </th>
+                <th></th>
             </tr>
         </thead>
         <tbody>
@@ -98,18 +106,15 @@
                     <td>
                         @Html.DisplayFor(modelItem => item.PTS)
                     </td>
-                    @*<td>
-                        <a asp-action="Edit" asp-route-id="@item.TeamID">Edit</a> |
-                        <a asp-action="Details" asp-route-id="@item.TeamID">Details</a> |
-                        <a asp-action="Delete" asp-route-id="@item.TeamID">Delete</a>
-                    </td>*@
+                    <td>
+                        <a asp-action="Edit" asp-route-id="@item.TeamID">Edit</a>
+                    </td>
                 </tr>
             }
         </tbody>
     </table>
-
-
-
-
-
 </body>
+
+
+@*<a asp-action="Details" asp-route-id="@item.TeamID">Details</a> |
+    <a asp-action="Delete" asp-route-id="@item.TeamID">Delete</a>*@

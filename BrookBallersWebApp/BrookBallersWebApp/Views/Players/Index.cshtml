@@ -4,6 +4,7 @@
     ViewData["Title"] = "Index";
 }
 
+
 <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
 
 <style>
@@ -15,41 +16,45 @@
     }
 
     .table-text {
-        color: white
+        color: white;
+        text-align : center;
+           
     }
 
     h2 {
         text-align: center;
+        text-shadow: #000 0px 0px 1px, #000 0px 0px 1px, #000 0px 0px 1px;
+        color: white;
     }
 
-    .add-player{
-        text-align:right;
+    .add-player {
+        text-align: right;
     }
 
-    .d1{
-        float:left;
-        
+    .d1 {
+        float: left;
     }
 
     .d2 {
-        float:right;
+        float: right;
     }
-
- 
 
 </style>
 
 
+
+
 <body class="body">
 
+
     <h2>All Players</h2>
-    
+
     <div>
         <div class="d1">
             @using (Html.BeginForm("Index", "Players", FormMethod.Get))
-             {
+            {
                 @Html.TextBox("input")<input type="submit" value="Search"/>
-             }
+            }
         </div>
 
         <div class="d2">
@@ -58,6 +63,7 @@
             </p>
         </div>
     </div>
+
 
     <table class="table">
         <thead>
@@ -89,32 +95,32 @@
                 <th>
                     @Html.DisplayNameFor(model => model.Red)
                 </th>
-
                 <th>
                     @Html.DisplayNameFor(model => model.TGA)
                 </th>
                 <th>
                     @Html.DisplayNameFor(model => model.Team.TeamName)
                 </th>
+                <th></th>
             </tr>
         </thead>
         <tbody>
 
-
             @if (Model.Count() == 0)
-             {
+            {
                 <tr>
-                    <td colspan="3" style="color:black">
+                    <td colspan="3" style="color:white">
                         No Players Found
                     </td>
                 </tr>
-             }
+            }
+
 
             else
             {
 
-               @foreach (var item in Model) 
-                { 
+                @foreach (var item in Model)
+                {
                     <tr class="table-text">
                         <td>
                             @Html.DisplayFor(modelItem => item.PlayerName)
@@ -149,11 +155,17 @@
                         <td>
                             @Html.DisplayFor(modelItem => item.Team.TeamName)
                         </td>
+                        <td class="edit">
+                            <a asp-action="Edit" asp-route-id="@item.PlayerID">Edit</a>
+                        </td>
                     </tr>
                 }
-        }
+            }
         </tbody>
     </table>
+
+    @*<a asp-action="Details" asp-route-id="@item.PlayerID">Details</a> |
+        <a asp-action="Delete" asp-route-id="@item.PlayerID">Delete</a>*@
 
 </body>
 
