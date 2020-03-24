@@ -14,24 +14,12 @@ Visual Studio 2017+
 
 ```
 1. Clone FootballWebApp repo
-2.  Open Visual Studios , click on Tools > Nuget Packet Manager > Package Manager Console.
+2. Open Visual Studios , click on Tools > Nuget Packet Manager > Package Manager Console.
 3. In Package Manager Console run these two scripts:
 	  a) add-migration v1 
 	  b) update-database
 4.  Now Build Solution and Run
 
-```
-
-## Running the tests
-
-Explain how to run the automated tests for this system
-
-### Break down into end to end tests
-
-Explain what these tests test and why
-
-```
-Give an example
 ```
 
 ## Deployment
@@ -45,7 +33,7 @@ Web application will be deployed onto netlify.
 
 ## Authors
 
-* **Hassan Abdullahi** [PurpleBooth](https://github.com/PurpleBooth)
+* **Hassan Abdullahi** [Hassan822](https://github.com/Hassan822)
 
 
 ## License
