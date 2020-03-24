@@ -22,23 +22,17 @@
         text-align: center;
     }
 
-    .tile {
-        list-style-type: none;
-        margin-top: 1vh;
+    .add-player{
+        text-align:right;
     }
 
-   .tile li {
-     display: inline-block;
-   }
-
-    .add-player {
-        margin-left: 55.6vw;
+    .d1{
+        float:left;
+        
     }
 
-    .search-name {
-        
-        margin-left:-3vw;
-        
+    .d2 {
+        float:right;
     }
 </style>
 
@@ -47,20 +41,21 @@
 <body class="body">
 
     <h2>All Players</h2>
-
-    <ul class="tile">
-        <li class="search-name">
+    
+    <div>
+        <div class="d1">
             @using (Html.BeginForm("Index", "Players", FormMethod.Get))
-             {
-                @Html.TextBox("input")<input type="submit" value="Search"/>
-             }
-        </li>
-        <li>
+            {
+                @Html.TextBox("input")<input type="submit" value="Search" />
+            }
+        </div>
+
+        <div class="d2">
             <p class="add-player">
                 <a asp-action="Create">Add Player</a>
             </p>
-        </li>
-    </ul>
+        </div>
+    </div>
 
     <table class="table">
         <thead>
