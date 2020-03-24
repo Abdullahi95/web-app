@@ -1,6 +1,6 @@
 # Football League Web Application
 
-A football league web application with  pages such as players, league, top scorers and assist leaders. Comprised of data held in SQL database which was built with EF code first approach with Razor and CSS used to build the user interface to interact with the data.
+A football league web application with  pages such as players, league, top scorers and assist leaders. Comprised of data held in SQL database which was built with EF code first approach, with Razor and CSS used to build the user interface to interact with the data.
 
 ## Getting Started
 
@@ -12,35 +12,16 @@ Visual Studio 2017+
 
 ### Installing
 
-A step by step series of examples that tell you how to get a development env running
-
-Say what the step will be
-
 ```
-Give the example
+1. Pull FootballWeb App repo
+2. 
 ```
-
-And repeat
-
-```
-until finished
-```
-
-End with an example of getting some data out of the system or using it for a little demo
 
 ## Running the tests
 
 Explain how to run the automated tests for this system
 
 ### Break down into end to end tests
-
-Explain what these tests test and why
-
-```
-Give an example
-```
-
-### And coding style tests
 
 Explain what these tests test and why
 
