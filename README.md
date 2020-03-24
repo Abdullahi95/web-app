@@ -4,7 +4,7 @@ A football league web application with  pages such as players, league, top score
 
 ## Database Relationship
 
-
+![Database Relationship](https://user-images.githubusercontent.com/59885578/77486177-f1a29c80-6e26-11ea-9fb8-c5e56d3f6a3d.png)
 
 
 ## Getting Started
