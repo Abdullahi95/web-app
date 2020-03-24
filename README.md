@@ -33,7 +33,7 @@ Web application will be deployed onto netlify.
 
 ## Built With
 
-* [Visual Studio 2019]
+* Visual Studio 2019
 
 
 ## Authors
