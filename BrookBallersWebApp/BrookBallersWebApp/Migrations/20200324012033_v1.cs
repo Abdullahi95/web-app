@@ -2,7 +2,7 @@
 
 namespace BrookBallersWebApp.Migrations
 {
-    public partial class v2 : Migration
+    public partial class v1 : Migration
     {
         protected override void Up(MigrationBuilder migrationBuilder)
         {
@@ -37,10 +37,9 @@ namespace BrookBallersWebApp.Migrations
                     Age = table.Column<int>(nullable: false),
                     Pos = table.Column<string>(nullable: false),
                     Foot = table.Column<string>(nullable: false),
-                    ShirtNum = table.Column<int>(nullable: false),
                     Goals = table.Column<int>(nullable: false),
                     Assists = table.Column<int>(nullable: false),
-                    TContributions = table.Column<int>(nullable: false),
+                    TGA = table.Column<int>(nullable: false),
                     Apps = table.Column<int>(nullable: false),
                     Yel = table.Column<int>(nullable: false),
                     Red = table.Column<int>(nullable: false),
@@ -62,7 +61,7 @@ namespace BrookBallersWebApp.Migrations
                 columns: new[] { "TeamID", "D", "GA", "GD", "GF", "L", "MP", "PTS", "TeamName", "W" },
                 values: new object[,]
                 {
-                    { 1, 1, 52, 38, 16, 0, 10, 28, "Tekk_Republic", 9 },
+                    { 1, 1, 52, 38, 16, 0, 10, 28, "Tekk Republic", 9 },
                     { 6, 1, 67, -45, 22, 8, 10, 4, "L.Hermanos", 1 },
                     { 2, 0, 33, 19, 52, 3, 10, 21, "AR FC", 7 },
                     { 5, 0, 64, -32, 32, 7, 10, 9, "Eagles United", 3 },
@@ -72,13 +71,13 @@ namespace BrookBallersWebApp.Migrations
 
             migrationBuilder.InsertData(
                 table: "Players",
-                columns: new[] { "PlayerID", "Age", "Apps", "Assists", "Foot", "Goals", "PlayerName", "Pos", "Red", "ShirtNum", "TContributions", "TeamID", "Yel" },
-                values: new object[] { 1, 24, 7, 6, "R", 4, "Hassan A", "M", 0, 6, 10, 1, 0 });
+                columns: new[] { "PlayerID", "Age", "Apps", "Assists", "Foot", "Goals", "PlayerName", "Pos", "Red", "TGA", "TeamID", "Yel" },
+                values: new object[] { 1, 24, 7, 6, "R", 4, "Hassan A", "M", 0, 10, 1, 0 });
 
             migrationBuilder.InsertData(
                 table: "Players",
-                columns: new[] { "PlayerID", "Age", "Apps", "Assists", "Foot", "Goals", "PlayerName", "Pos", "Red", "ShirtNum", "TContributions", "TeamID", "Yel" },
-                values: new object[] { 2, 25, 10, 2, "R", 3, "Mohammed H", "F", 0, 9, 5, 6, 1 });
+                columns: new[] { "PlayerID", "Age", "Apps", "Assists", "Foot", "Goals", "PlayerName", "Pos", "Red", "TGA", "TeamID", "Yel" },
+                values: new object[] { 2, 25, 10, 2, "R", 3, "Mohammed H", "F", 0, 5, 6, 4 });
 
             migrationBuilder.CreateIndex(
                 name: "IX_Players_TeamID",

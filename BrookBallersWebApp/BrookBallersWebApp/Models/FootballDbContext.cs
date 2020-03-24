@@ -50,17 +50,16 @@ namespace BrookBallersWebApp.Models
                 {
                     PlayerID = 1,
                     PlayerName = "Hassan A",
-                    TeamID = (int)ETeam.TekkRepublic,
+                    TeamID = (int)ETeam.Tekk_Republic,
                     Age = 24,
                     Foot = 'R',
                     Pos = 'M',
-                    ShirtNum = 6,
                     Goals = 4,
                     Assists = 6,
                     Apps = 7,
                     Red = 0,
                     Yel = 0,
-                    TContributions = 10
+                    TGA = 10
                 },
 
                 new Player()
@@ -71,19 +70,18 @@ namespace BrookBallersWebApp.Models
                     Age = 25,
                     Foot = 'R',
                     Pos = 'F',
-                    ShirtNum = 9,
                     Goals = 3,
                     Assists = 2,
                     Apps = 10,
-                    Yel = 1,
+                    Yel = 4,
                     Red = 0,
-                    TContributions = 5
+                    TGA = 5
                 });
 
 
 
             modelBuilder.Entity<Team>().HasData(
-                new Team() { TeamName = "Tekk Republic", W = 9, D = 1, L = 0, MP = 10, GA = 52, GF = 16, GD = 38, PTS = 28, TeamID = (int)ETeam.TekkRepublic},
+                new Team() { TeamName = "Tekk Republic", W = 9, D = 1, L = 0, MP = 10, GA = 52, GF = 16, GD = 38, PTS = 28, TeamID = (int)ETeam.Tekk_Republic},
                 new Team() { TeamName = "L.Hermanos", W = 1, D = 1, L = 8, GA = 67, GF = 22, GD = -45, MP = 10, PTS = 4, TeamID = (int)ETeam.L_Hermanos },
                 new Team() { TeamName = "AR FC", W = 7, D = 0, L = 3, GA = 33, GF = 52, GD = 19, MP = 10, PTS = 21, TeamID = (int)ETeam.AR_FC },
                 new Team() { TeamName = "Eagles United", W = 3, D = 0, L = 7, GA = 64, GF = 32, GD = -32, MP = 10, PTS = 9, TeamID = (int)ETeam.Eagles_United},
@@ -97,7 +95,7 @@ namespace BrookBallersWebApp.Models
 
         enum ETeam
         {
-            TekkRepublic = 1,
+            Tekk_Republic = 1,
             AR_FC,
             Hurli_FC,
             Akdem,

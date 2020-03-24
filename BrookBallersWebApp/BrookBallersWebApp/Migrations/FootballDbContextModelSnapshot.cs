@@ -52,10 +52,7 @@ namespace BrookBallersWebApp.Migrations
                     b.Property<int>("Red")
                         .HasColumnType("int");
 
-                    b.Property<int>("ShirtNum")
-                        .HasColumnType("int");
-
-                    b.Property<int>("TContributions")
+                    b.Property<int>("TGA")
                         .HasColumnType("int");
 
                     b.Property<int?>("TeamID")
@@ -82,8 +79,7 @@ namespace BrookBallersWebApp.Migrations
                             PlayerName = "Hassan A",
                             Pos = "M",
                             Red = 0,
-                            ShirtNum = 6,
-                            TContributions = 10,
+                            TGA = 10,
                             TeamID = 1,
                             Yel = 0
                         },
@@ -98,10 +94,9 @@ namespace BrookBallersWebApp.Migrations
                             PlayerName = "Mohammed H",
                             Pos = "F",
                             Red = 0,
-                            ShirtNum = 9,
-                            TContributions = 5,
+                            TGA = 5,
                             TeamID = 6,
-                            Yel = 1
+                            Yel = 4
                         });
                 });
 
@@ -154,7 +149,7 @@ namespace BrookBallersWebApp.Migrations
                             L = 0,
                             MP = 10,
                             PTS = 28,
-                            TeamName = "Tekk_Republic",
+                            TeamName = "Tekk Republic",
                             W = 9
                         },
                         new

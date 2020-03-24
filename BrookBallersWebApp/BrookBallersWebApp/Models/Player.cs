@@ -15,12 +15,10 @@ namespace BrookBallersWebApp.Models
         public int Age { get; set; }
         public char Pos { get; set; }
         public char Foot { get; set; }
-        [Display(Name = "Shirt Num")]
-        public int ShirtNum { get; set; }
         public int Goals { get; set; }
         public int Assists { get; set; }
-        [Display(Name = "G + A ")]
-        public int TContributions { get; set; }
+        [Display(Name = "G + A")]
+        public int TGA { get; set; }
         public int Apps { get; set; }
         public int Yel { get; set; }
         public int Red { get; set; }

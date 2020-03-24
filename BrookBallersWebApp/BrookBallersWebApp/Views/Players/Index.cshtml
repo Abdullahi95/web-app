@@ -34,8 +34,10 @@
     .d2 {
         float:right;
     }
-</style>
 
+ 
+
+</style>
 
 
 <body class="body">
@@ -45,9 +47,9 @@
     <div>
         <div class="d1">
             @using (Html.BeginForm("Index", "Players", FormMethod.Get))
-            {
-                @Html.TextBox("input")<input type="submit" value="Search" />
-            }
+             {
+                @Html.TextBox("input")<input type="submit" value="Search"/>
+             }
         </div>
 
         <div class="d2">
@@ -89,7 +91,7 @@
                 </th>
 
                 <th>
-                    @Html.DisplayNameFor(model => model.TContributions)
+                    @Html.DisplayNameFor(model => model.TGA)
                 </th>
                 <th>
                     @Html.DisplayNameFor(model => model.Team.TeamName)
@@ -142,7 +144,7 @@
                             @Html.DisplayFor(modelItem => item.Red)
                         </td>
                         <td>
-                            @Html.DisplayFor(modelItem => item.TContributions)
+                            @Html.DisplayFor(modelItem => item.TGA)
                         </td>
                         <td>
                             @Html.DisplayFor(modelItem => item.Team.TeamName)

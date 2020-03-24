@@ -20,6 +20,7 @@ namespace BrookBallersWebApp.Models
         public int GD { get; set; }
         public int PTS { get; set; }
 
+        // team has many players.
         public ICollection<Player> Players { get; set; }
         
     }

@@ -4,81 +4,89 @@
     ViewData["Title"] = "Create";
 }
 
-<h1>Create</h1>
+<style>
+    .body {
+        background: url('https://www.dreamleagues.co.uk/content/images/backdrops/banner-min.jpg') no-repeat center center fixed;
+        background-size: cover;
+        background-attachment: fixed;
+        color: white;
+    }
 
-<h4>Player</h4>
-<hr />
-<div class="row">
-    <div class="col-md-4">
-        <form asp-action="Create">
-            <div asp-validation-summary="ModelOnly" class="text-danger"></div>
-            <div class="form-group">
-                <label asp-for="PlayerName" class="control-label"></label>
-                <input asp-for="PlayerName" class="form-control" />
-                <span asp-validation-for="PlayerName" class="text-danger"></span>
-            </div>
-            <div class="form-group">
-                <label asp-for="Age" class="control-label"></label>
-                <input asp-for="Age" class="form-control" />
-                <span asp-validation-for="Age" class="text-danger"></span>
-            </div>
-            <div class="form-group">
-                <label asp-for="Pos" class="control-label"></label>
-                <input asp-for="Pos" class="form-control" />
-                <span asp-validation-for="Pos" class="text-danger"></span>
-            </div>
-            <div class="form-group">
-                <label asp-for="Foot" class="control-label"></label>
-                <input asp-for="Foot" class="form-control" />
-                <span asp-validation-for="Foot" class="text-danger"></span>
-            </div>
-            <div class="form-group">
-                <label asp-for="ShirtNum" class="control-label"></label>
-                <input asp-for="ShirtNum" class="form-control" />
-                <span asp-validation-for="ShirtNum" class="text-danger"></span>
-            </div>
-            <div class="form-group">
-                <label asp-for="Goals" class="control-label"></label>
-                <input asp-for="Goals" class="form-control" />
-                <span asp-validation-for="Goals" class="text-danger"></span>
-            </div>
-            <div class="form-group">
-                <label asp-for="Assists" class="control-label"></label>
-                <input asp-for="Assists" class="form-control" />
-                <span asp-validation-for="Assists" class="text-danger"></span>
-            </div>
-            <div class="form-group">
-                <label asp-for="TContributions" class="control-label"></label>
-                <input asp-for="TContributions" class="form-control" />
-                <span asp-validation-for="TContributions" class="text-danger"></span>
-            </div>
-            <div class="form-group">
-                <label asp-for="Apps" class="control-label"></label>
-                <input asp-for="Apps" class="form-control" />
-                <span asp-validation-for="Apps" class="text-danger"></span>
-            </div>
-            <div class="form-group">
-                <label asp-for="Yel" class="control-label"></label>
-                <input asp-for="Yel" class="form-control" />
-                <span asp-validation-for="Yel" class="text-danger"></span>
-            </div>
-            <div class="form-group">
-                <label asp-for="Red" class="control-label"></label>
-                <input asp-for="Red" class="form-control" />
-                <span asp-validation-for="Red" class="text-danger"></span>
-            </div>
-            <div class="form-group">
-                <label asp-for="TeamID" class="control-label"></label>
-                <select asp-for="TeamID" class ="form-control" asp-items="ViewBag.TeamID"></select>
-            </div>
-            <div class="form-group">
-                <input type="submit" value="Create" class="btn btn-primary" />
-            </div>
-        </form>
+</style>
+
+
+<body class="body">
+    <h1>Create</h1>
+
+    <h4>Player</h4>
+    <hr />
+    <div class="row">
+        <div class="col-md-4">
+            <form asp-action="Create">
+                <div asp-validation-summary="ModelOnly" class="text-danger"></div>
+                <div class="form-group">
+                    <label asp-for="PlayerName" class="control-label"></label>
+                    <input asp-for="PlayerName" class="form-control" />
+                    <span asp-validation-for="PlayerName" class="text-danger"></span>
+                </div>
+                <div class="form-group">
+                    <label asp-for="Age" class="control-label"></label>
+                    <input asp-for="Age" class="form-control" />
+                    <span asp-validation-for="Age" class="text-danger"></span>
+                </div>
+                <div class="form-group">
+                    <label asp-for="Pos" class="control-label"></label>
+                    <input asp-for="Pos" class="form-control" />
+                    <span asp-validation-for="Pos" class="text-danger"></span>
+                </div>
+                <div class="form-group">
+                    <label asp-for="Foot" class="control-label"></label>
+                    <input asp-for="Foot" class="form-control" />
+                    <span asp-validation-for="Foot" class="text-danger"></span>
+                </div>
+                <div class="form-group">
+                    <label asp-for="Goals" class="control-label"></label>
+                    <input asp-for="Goals" class="form-control" />
+                    <span asp-validation-for="Goals" class="text-danger"></span>
+                </div>
+                <div class="form-group">
+                    <label asp-for="Assists" class="control-label"></label>
+                    <input asp-for="Assists" class="form-control" />
+                    <span asp-validation-for="Assists" class="text-danger"></span>
+                </div>
+                <div class="form-group">
+                    <label asp-for="TGA" class="control-label"></label>
+                    <input asp-for="TGA" class="form-control" />
+                    <span asp-validation-for="TGA" class="text-danger"></span>
+                </div>
+                <div class="form-group">
+                    <label asp-for="Apps" class="control-label"></label>
+                    <input asp-for="Apps" class="form-control" />
+                    <span asp-validation-for="Apps" class="text-danger"></span>
+                </div>
+                <div class="form-group">
+                    <label asp-for="Yel" class="control-label"></label>
+                    <input asp-for="Yel" class="form-control" />
+                    <span asp-validation-for="Yel" class="text-danger"></span>
+                </div>
+                <div class="form-group">
+                    <label asp-for="Red" class="control-label"></label>
+                    <input asp-for="Red" class="form-control" />
+                    <span asp-validation-for="Red" class="text-danger"></span>
+                </div>
+                <div class="form-group">
+                    <label asp-for="TeamID" class="control-label"></label>
+                    <select asp-for="TeamID" class="form-control" asp-items="ViewBag.TeamID"></select>
+                </div>
+                <div class="form-group">
+                    <input type="submit" value="Create" class="btn btn-primary" />
+                </div>
+            </form>
+        </div>
     </div>
-</div>
 
-<div>
-    <a asp-action="Index">Back to List</a>
-</div>
+    <div>
+        <a asp-action="Index">Back to List</a>
+    </div>
 
+</body>
