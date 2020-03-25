@@ -2,6 +2,11 @@
 
 A football league web application with  pages players, league, top scorers and assist leaders. Comprised of data held in SQL database which was built with EF code first approach, with Razor and CSS used to build the user interface to interact with the data.
 
+## Planning
+
+Wireframe : https://wireframe.cc/14drV2
+
+
 ## Database Relationship
 
 ![Database Relationship](https://user-images.githubusercontent.com/59885578/77486177-f1a29c80-6e26-11ea-9fb8-c5e56d3f6a3d.png)
