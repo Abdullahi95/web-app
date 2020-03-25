@@ -4,8 +4,8 @@ A football league web application with  pages players, league, top scorers and a
 
 ## Planning
 
-Wireframe : https://wireframe.cc/14drV2
-User Stories : https://github.com/Hassan822/FootballWebApp/projects/1
+* [Wireframe](https://wireframe.cc/14drV2)
+* [User Stories](https://github.com/Hassan822/FootballWebApp/projects/1)
 
 
 
