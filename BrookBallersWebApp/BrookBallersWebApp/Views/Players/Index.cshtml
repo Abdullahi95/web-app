@@ -4,14 +4,12 @@
     ViewData["Title"] = "Index";
 }
 
-
     <h2>All Players</h2>
-
     <div>
         <div class="d1">
             @using (Html.BeginForm("Index", "Players", FormMethod.Get))
              {
-                @Html.TextBox("input", "", new { placeholder = "Name"})<input type="submit" value="Search" placeholder="Name"/>
+                @Html.TextBox("input", "", new { placeholder = "Name"})<input type="submit" value="Search"/>
              }
         </div>
 

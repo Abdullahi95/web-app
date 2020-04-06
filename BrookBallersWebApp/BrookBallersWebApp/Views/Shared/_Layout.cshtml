@@ -6,11 +6,10 @@
     <title>Brook Ballers</title>
     <link rel="stylesheet" href="~/lib/bootstrap/dist/css/bootstrap.min.css" />
     <link rel="stylesheet" href="~/css/site.css" />
-    <link rel="shortcut icon" href="~/icon/favicon.ico" type="image/x-icon" />
+    <link rel="icon" href="~/icon/favicon.ico" type="image/x-icon" />
 </head>
 
-<body class="body">
-
+<body>
     <header>
         <nav class="navbar navbar-expand-sm navbar-toggleable-sm box-shadow mb-3">
             <div class="container">
@@ -38,21 +37,14 @@
             </div>
         </nav>
     </header>
-    
-   
-        <div class="container">
-            <main role="main" class="pb-3">
-              
-                @RenderBody()
-            </main>
-        </div>
- 
+    <div class="container">
+        <main role="main" class="pb-3">
 
-    <footer class=" footer text-muted">
-        <div class="container">
-            @*&copy; 2020 - BrookBallersWebApp - <a asp-area="" asp-controller="Home" asp-action="Privacy">Privacy</a>*@
-        </div>
-    </footer>
+            @RenderBody()
+        </main>
+    </div>
+
+    
     <script src="~/lib/jquery/dist/jquery.min.js"></script>
     <script src="~/lib/bootstrap/dist/js/bootstrap.bundle.min.js"></script>
     <script src="~/js/site.js" asp-append-version="true"></script>
