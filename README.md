@@ -1,10 +1,22 @@
 # Football League Web Application
 
-A football league web application with  pages such as players, league, top scorers and assist leaders. Comprised of data held in SQL database which was built with EF code first approach, with Razor and CSS used to build the user interface to interact with the data.
+A football league themed ASP.NET Core web app with pages to players, league, top scorers and assist leaders. Comprised of data held in SQL database which was built with EF code first approach, with Razor and CSS used to build the user interface to interact with the data.
+
+### Planning
+
+* [Wireframe](https://wireframe.cc/14drV2)
+* [User Stories](https://github.com/Hassan822/FootballWebApp/projects/1)
+
+
+
+### Database Relationship
+
+![Database Relationship](https://user-images.githubusercontent.com/59885578/77486177-f1a29c80-6e26-11ea-9fb8-c5e56d3f6a3d.png)
+
 
 ## Getting Started
 
-These instructions will get you a copy of the project up and running on your local machine for development and testing purposes. See deployment for notes on how to deploy the project on a live system.
+These instructions will get you a copy of the project up and running on your local machine for development and testing purposes. 
 
 ### Prerequisites
 
@@ -13,45 +25,28 @@ Visual Studio 2017+
 ### Installing
 
 ```
-1. Pull FootballWeb App repo
-2. 
-```
+1. Clone FootballWebApp repo
+2. Open Visual Studios , click on Tools > Nuget Packet Manager > Package Manager Console.
+3. In Package Manager Console run these two scripts:
+	  a) add-migration v1 
+	  b) update-database
+4.  Now Build Solution and Run
 
-## Running the tests
-
-Explain how to run the automated tests for this system
-
-### Break down into end to end tests
-
-Explain what these tests test and why
-
-```
-Give an example
 ```
 
 ## Deployment
 
-Add additional notes about how to deploy this on a live system
+Web application will be deployed onto netlify.
 
 ## Built With
 
-* [Dropwizard](http://www.dropwizard.io/1.0.2/docs/) - The web framework used
-* [Maven](https://maven.apache.org/) - Dependency Management
-* [ROME](https://rometools.github.io/rome/) - Used to generate RSS Feeds
+* Visual Studio 2019
 
-## Contributing
-
-Please read [CONTRIBUTING.md](https://gist.github.com/PurpleBooth/b24679402957c63ec426) for details on our code of conduct, and the process for submitting pull requests to us.
-
-## Versioning
-
-We use [SemVer](http://semver.org/) for versioning. For the versions available, see the [tags on this repository](https://github.com/your/project/tags). 
 
 ## Authors
 
-* **Billie Thompson** - *Initial work* - [PurpleBooth](https://github.com/PurpleBooth)
+* **Hassan Abdullahi** [Hassan822](https://github.com/Hassan822)
 
-See also the list of [contributors](https://github.com/your/project/contributors) who participated in this project.
 
 ## License
 
