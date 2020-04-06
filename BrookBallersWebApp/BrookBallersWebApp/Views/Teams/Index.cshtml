@@ -5,37 +5,9 @@
 }
 
 
-<style>
-    .body {
-        background: url('https://www.dreamleagues.co.uk/content/images/backdrops/banner-min.jpg') no-repeat center center fixed;
-        background-size: cover;
-        background-attachment: fixed;
-        color: white;
-    }
-
-    .table-text {
-        color: white;
-        text-align: center;
-    }
-
-    .add-team {
-        text-align: right;
-    }
-
-    h2 {
-        margin-bottom: 0px;
-        text-align: center;
-        text-shadow: #000 0px 0px 1px, #000 0px 0px 1px, #000 0px 0px 1px;
-        color: white;
-    }
-</style>
 
 
-
-
-<body class="body">
-
-    <h2>League Table</h2>
+    <h2 id="leaguetableheader">League Table</h2>
 
     <p class="add-team">
         <a asp-action="Create">Add Team</a>
@@ -113,8 +85,6 @@
             }
         </tbody>
     </table>
-</body>
 
 
-@*<a asp-action="Details" asp-route-id="@item.TeamID">Details</a> |
-    <a asp-action="Delete" asp-route-id="@item.TeamID">Delete</a>*@
+

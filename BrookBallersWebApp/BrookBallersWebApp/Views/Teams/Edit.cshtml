@@ -3,42 +3,9 @@
 @{
     ViewData["Title"] = "Edit";
 }
-    
-<style>
-    .body {
-        background: url('https://www.dreamleagues.co.uk/content/images/backdrops/banner-min.jpg') no-repeat center center fixed;
-        background-size: cover;
-        background-attachment: fixed;
-        color: white;
-    }
-
-    .table-text {
-        color: white
-    }
-
-    h2 {
-        margin-top: 1px;
-        text-align: left;
-        text-shadow: #000 0px 0px 1px, #000 0px 0px 1px, #000 0px 0px 1px;
-        color: white;
-    }
-
-    /* Chrome, Safari, Edge, Opera */
-    input::-webkit-outer-spin-button,
-    input::-webkit-inner-spin-button {
-        -webkit-appearance: none;
-        margin: 0;
-    }
-
-    /* Firefox */
-    input[type=number] {
-        -moz-appearance: textfield;
-    }
-</style>
 
 
-<body class="body">
-    <h2>Edit Team</h2>
+    <h2 class="crudheaders">Edit Team</h2>
 
     <hr />
     <div class="row">
@@ -101,5 +68,3 @@
     <div>
         <a asp-action="Index">League Table</a>
     </div>
-
-</body>

@@ -5,45 +5,7 @@
 }
 
 
-<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
-
-<style>
-    .body {
-        background: url('https://www.dreamleagues.co.uk/content/images/backdrops/banner-min.jpg') no-repeat center center fixed;
-        background-size: cover;
-        background-attachment: fixed;
-        color: white;
-    }
-
-    .table-text {
-        color: white
-    }
-
-    h2 {
-        margin-top: 1px;
-        text-align: left;
-        text-shadow: #000 0px 0px 1px, #000 0px 0px 1px, #000 0px 0px 1px;
-        color: white;
-    }
-
-    /* Chrome, Safari, Edge, Opera */
-    input::-webkit-outer-spin-button,
-    input::-webkit-inner-spin-button {
-        -webkit-appearance: none;
-        margin: 0;
-    }
-
-    /* Firefox */
-    input[type=number] {
-        -moz-appearance: textfield;
-    }
-
-</style>
-
-
-<body class="body">
-
-    <h2>Create Player</h2>
+    <h2 class="crudheaders">Create Player</h2>
 
     <hr />
     <div class="row">
@@ -101,8 +63,8 @@
                     <span asp-validation-for="Red" class="text-danger"></span>
                 </div>
                 <div class="form-group">
-                    <label asp-for="TeamID" class="control-label"></label>
-                    <select asp-for="TeamID" class="form-control" asp-items="ViewBag.TeamID"></select>
+                    <label asp-for="Team.TeamName" class="control-label"></label>
+                    <select asp-for="Team.TeamName" class="form-control" asp-items="@ViewBag.TeamID"></select>
                 </div>
                 <div class="form-group">
                     <input type="submit" value="Create" class="btn btn-primary" />
@@ -114,5 +76,3 @@
     <div>
         <a asp-action="Index">All Players</a>
     </div>
-
-</body>

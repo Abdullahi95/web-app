@@ -6,17 +6,10 @@
     <title>Brook Ballers</title>
     <link rel="stylesheet" href="~/lib/bootstrap/dist/css/bootstrap.min.css" />
     <link rel="stylesheet" href="~/css/site.css" />
+    <link rel="shortcut icon" href="~/icon/favicon.ico" type="image/x-icon" />
 </head>
 
-<body>
-    <style>
-        .navbar {
-            background-color: none;
-            box-shadow: none;  
-        }
-    </style>
-
-
+<body class="body">
 
     <header>
         <nav class="navbar navbar-expand-sm navbar-toggleable-sm box-shadow mb-3">
@@ -45,12 +38,15 @@
             </div>
         </nav>
     </header>
-    <div class="container">
-        <main role="main" class="pb-3">
-            
-            @RenderBody()
-        </main>
-    </div>
+    
+   
+        <div class="container">
+            <main role="main" class="pb-3">
+              
+                @RenderBody()
+            </main>
+        </div>
+ 
 
     <footer class=" footer text-muted">
         <div class="container">
