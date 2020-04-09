@@ -14,12 +14,6 @@ body {
     text-align: center;
 }
 
-#leaguetableheader {
-    margin-bottom: 0px;
-    text-align: center;
-    text-shadow: #000 0px 0px 1px, #000 0px 0px 1px, #000 0px 0px 1px;
-    color: white;
-}
 
 h2 {
     margin-bottom: 30px;
@@ -28,9 +22,6 @@ h2 {
     color: white;
 }
 
-.add-team {
-    text-align: right;
-}
 
 .navbar {
     background-color: none;
@@ -38,34 +29,9 @@ h2 {
     width: 60%;
 }
 
-.crudheaders {
-    margin-top: 1px;
-    text-align: left;
-    text-shadow: #000 0px 0px 1px, #000 0px 0px 1px, #000 0px 0px 1px;
-    color: white;
+
+.div1{
+    margin-bottom : 1%;
+    float:right;
 }
 
-/* Chrome, Safari, Edge, Opera */
-input::-webkit-outer-spin-button,
-input::-webkit-inner-spin-button {
-    -webkit-appearance: none;
-    margin: 0;
-}
-
-/* Firefox */
-input[type=number] {
-    -moz-appearance: textfield;
-}
-
-
-.add-player {
-    text-align: right;
-}
-
-.d1 {
-    float: left;
-}
-
-.d2 {
-    float: right;
-}

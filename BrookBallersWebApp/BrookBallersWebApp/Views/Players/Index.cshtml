@@ -4,21 +4,23 @@
     ViewData["Title"] = "Index";
 }
 
-    <h2>All Players</h2>
-    <div>
-        <div class="d1">
-            @using (Html.BeginForm("Index", "Players", FormMethod.Get))
-             {
-                @Html.TextBox("input", "", new { placeholder = "Name"})<input type="submit" value="Search"/>
-             }
-        </div>
+   <head>
+     <link href="~/css/searchinput.css" rel="stylesheet" type="text/css" />
+   </head>
 
-        <div class="d2">
-            <p class="add-player">
-                <a asp-action="Create">Add Player</a>
-            </p>
-        </div>
-    </div>
+
+<h2>All Players</h2>
+
+<div class=div1>
+    @using (Html.BeginForm("Index", "Players", FormMethod.Get))
+    {
+        @Html.TextBox("input", "", new { placeholder = "Name" });
+    }
+
+</div>
+
+<div class="div2">
+
     <table class="table">
         <thead>
             <tr class="table-text">
@@ -55,7 +57,6 @@
                 <th>
                     @Html.DisplayNameFor(model => model.Team.TeamName)
                 </th>
-                <th></th>
             </tr>
         </thead>
         <tbody>
@@ -64,7 +65,7 @@
             {
                 <tr>
                     <td colspan="3" style="color:white">
-                        No Players Found
+                        No Player(s) Found
                     </td>
                 </tr>
             }
@@ -109,14 +110,10 @@
                         <td>
                             @Html.DisplayFor(modelItem => item.Team.TeamName)
                         </td>
-                        <td class="edit">
-                            <a asp-action="Edit" asp-route-id="@item.PlayerID">Edit</a>
-                        </td>
                     </tr>
                 }
             }
         </tbody>
     </table>
 
-
-
+</div>

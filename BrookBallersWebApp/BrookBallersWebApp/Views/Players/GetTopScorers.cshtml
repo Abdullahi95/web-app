@@ -1,15 +1,17 @@
 ﻿@model IEnumerable<BrookBallersWebApp.Models.Player>
-    @{
-        ViewData["Title"] = "GetTopScorers";
-    }
+@{
+    ViewData["Title"] = "GetTopScorers";
+}
 
-   
+
+
+
 <h2>Top Scorers</h2>
 
 <table class="table">
     <thead>
         <tr class="table-text">
-            <th >
+            <th>
                 @Html.DisplayNameFor(model => model.PlayerName)
             </th>
             <th>
@@ -52,5 +54,3 @@
 </table>
 
 
-
-    
